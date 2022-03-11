@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { ILoanInterface } from '../../models/ILoan';
 import './LoanView.css';
 
-export interface LoanViewInterface {
-  loanLists?: LoanInterface[],
+export interface ILoanViewInterface {
+  loanLists?: ILoanInterface[],
   loanNumber?: Number,
   updateLoanAmountPaid?: (loanNumber: Number, amount: Number) => {};
 }
 
-export const LoanView = (props: LoanViewInterface) => {
+export const LoanView = (props: ILoanViewInterface) => {
   const { loanNumber, loanLists, updateLoanAmountPaid } = props;
-  const loans: LoanInterface[] | undefined = loanLists?.filter(l => l.Loan_Number === loanNumber);
-  const loan: LoanInterface | undefined = loans && loans[0];
+  const loans: ILoanInterface[] | undefined = loanLists?.filter(l => l.Loan_Number === loanNumber);
+  const loan: ILoanInterface | undefined = loans && loans[0];
   const [amtPaid, setAmtPaid] = useState(loan ? (loan.AmountPaid ? loan.AmountPaid : 0) : 0) as any;
 
   if (!loanNumber && loanLists) return null;

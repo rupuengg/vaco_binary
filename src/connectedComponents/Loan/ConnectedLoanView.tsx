@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { LoanActions } from '../../actions/loan.action';
-import LoanView, { LoanViewInterface } from '../../components/Loan/LoanView';
+import LoanView, { ILoanViewInterface } from '../../components/Loan/LoanView';
 
-const ConnectedLoanView = (props: LoanViewInterface) => {
+const ConnectedLoanView = (props: ILoanViewInterface) => {
   return (<LoanView {...props} />);
 }
 
