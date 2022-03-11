@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LoanInterface } from '../../models/Loan';
+import { ILoanInterface } from '../../models/ILoan';
 import './LoanView.css';
 
 export interface LoanViewInterface {

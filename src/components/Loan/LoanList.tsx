@@ -1,8 +1,8 @@
 import { AgGridReact } from 'ag-grid-react';
 import React from 'react';
-import { LoanListInterface } from '../../models/Loan';
+import { ILoanListInterface } from '../../models/ILoan';
 
-export const LoanList = (props: LoanListInterface) => {
+export const LoanList = (props: ILoanListInterface) => {
   const { lists, columns } = props;
 
   return (

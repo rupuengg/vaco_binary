@@ -1,4 +1,4 @@
-export interface LoanInterface {
+export interface ILoanInterface {
   Customer_Id: number,
   Customer_Name: string,
   Customer_Address: string,
@@ -9,12 +9,12 @@ export interface LoanInterface {
   AmountPaid: Number,
 }
 
-export interface fieldInterface {
+export interface IFieldInterface {
   field: string,
   headerName: string,
 }
 
-export interface LoanListInterface {
-  lists?: LoanInterface[],
-  columns?: fieldInterface[],
+export interface ILoanListInterface {
+  lists?: ILoanInterface[],
+  columns?: IFieldInterface[],
 }

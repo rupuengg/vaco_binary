@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import LoanList from '../../components/Loan/LoanList';
-import { LoanListInterface } from '../../models/Loan';
+import { ILoanListInterface } from '../../models/ILoan';
 
-const ConnectedLoanList = (props: LoanListInterface) => {
+const ConnectedLoanList = (props: ILoanListInterface) => {
   const { lists, columns } = props;
 
   return (<LoanList lists={lists} columns={columns} />);
